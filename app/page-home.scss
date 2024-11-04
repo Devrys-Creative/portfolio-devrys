@@ -1,7 +1,64 @@
+@use "./colors-dark.scss";
 
-.page-home {
-  &__appBar {
-    position: sticky;
-    
+
+// hero header
+@keyframes bouncing {
+  0% {
+    transform: translateY(0);
   }
+  100% {
+    transform: translateY(30px);
+  }
+}
+.hero-header {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  &__title {
+    font-family: "fluoxetine";
+    font-size: 4em;
+    span {
+      color: #ffffff;
+      margin-left: 30px;
+    }
+  }
+  &__photo {
+
+  }
+  &__name {
+    font-family: "fluoxetine";
+    font-size: 3em;
+    color:#ffffff;
+  }
+  &__job {
+    font-size: 2em;
+    font-family: "speculum";
+
+  }
+  &__tech-list {
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    font-size: 4em;
+  }
+  &__scroll-indicator {
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    font-size: 3em;
+    color: #ffffff;
+    overflow: visible;
+    animation: bouncing 1s ease 5s infinite alternate;
+  }
+}
+
+// appbar
+
+// biography
+.biography {
+
 }

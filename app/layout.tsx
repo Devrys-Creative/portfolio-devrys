@@ -1,6 +1,17 @@
+// import next components and types
 import type { Metadata } from "next";
-import "./globals.scss";
+import Head from "next/head";
+
+// import custom components
 import { Footer } from "./Components/Footer/Footer";
+
+// import styles
+import "./globals.scss";
+// Setup font-awesome
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
+import './Assets/icons/fontawesome';
+config.autoAddCss = false; // Désactive l'injection automatique de CSS
 
 
 export const metadata: Metadata = {
@@ -15,6 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr_FR">
+      <Head>
+        <script src="https://kit.fontawesome.com/4e6e3d1944.js" crossOrigin="anonymous" defer></script>
+      </Head>
       <body>
         {children}
         <Footer />
