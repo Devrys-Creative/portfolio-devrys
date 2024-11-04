@@ -1,10 +1,14 @@
 'use client';
 
-import { Children } from "react"
+import Link from "next/link";
+import { ReactNode } from "react";
 
+interface ButtonProps {
+    children: ReactNode,
+};
 
-export const Button = () => {
+export const Button:React.FC<ButtonProps> = ({children}) => {
     return (
-        <button>{Children}</button>
+        <Link href='#'>{children}</Link>
     )
 }

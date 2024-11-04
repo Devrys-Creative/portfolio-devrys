@@ -7,6 +7,7 @@ const ProjectPage = () => {
         <>
         <AppBar />
         <main>
+            <p>Détails about projet selected</p>
         </main>
         </>
     );

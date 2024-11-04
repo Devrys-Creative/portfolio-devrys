@@ -8,7 +8,10 @@ export default function Home() {
     <>
     <HeroHeader />
     <AppBar />
-  
+    {/* <Biography />
+    <Skills />
+    <Projects />
+    <Contact /> */}
     </>
   );
 }

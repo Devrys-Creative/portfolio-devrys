@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.scss";
+import { Footer } from "./Components/Footer/Footer";
 
 
 export const metadata: Metadata = {
@@ -16,6 +17,7 @@ export default function RootLayout({
     <html lang="fr_FR">
       <body>
         {children}
+        <Footer />
       </body>
     </html>
   );
