@@ -12,18 +12,19 @@
 }
 .hero-header {
   position: relative;
-  min-height: 100vh;
+  min-height: 98vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 50px;
+  padding-bottom: 80px;
   &__title {
     font-family: "fluoxetine";
     font-size: 4em;
     span {
       color: #ffffff;
-      margin-left: 30px;
     }
   }
   &__photo {
@@ -42,13 +43,14 @@
   &__tech-list {
     padding: 0;
     display: flex;
+    flex-wrap: wrap; // delete if reducing size with breakpoints
     gap: 30px;
     font-size: 4em;
   }
   &__scroll-indicator {
     position: absolute;
-    bottom: 100px;
-    right: 100px;
+    bottom: 10%; // fix when everything around is responsive
+    right: 10%;
     font-size: 3em;
     color: #ffffff;
     overflow: visible;
@@ -57,7 +59,10 @@
 }
 
 // appbar
-
+// long space
+.long-space {
+  height: 2800px;
+}
 // biography
 .biography {
 

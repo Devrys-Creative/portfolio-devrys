@@ -1,0 +1,27 @@
+@use "../../colors-dark.scss";
+
+.appbar {
+    position: sticky;
+    top: 0; left: 0;
+    background-color: colors-dark.$primary-color;
+    color: #333333;
+    font-size: 1.4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 50px;
+    &__menu {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        &__home {
+            font-family: "fluoxetine";
+            font-size: 1.2em;
+        }
+    }
+    // &__theme-toggler {
+
+    // }
+}

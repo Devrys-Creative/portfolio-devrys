@@ -11,6 +11,7 @@ import "./globals.scss";
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import './Assets/icons/fontawesome';
+import { ThemeProvider } from "./Hooks/useTheme";
 config.autoAddCss = false; // Désactive l'injection automatique de CSS
 
 
@@ -30,8 +31,10 @@ export default function RootLayout({
         <script src="https://kit.fontawesome.com/4e6e3d1944.js" crossOrigin="anonymous" defer></script>
       </Head>
       <body>
-        {children}
-        <Footer />
+        <ThemeProvider>
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

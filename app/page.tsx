@@ -4,7 +4,6 @@ import myPhoto from "./Assets/images/head.webp";
 import Image from "next/image";
 import { AppBar } from "./Components/AppBar/AppBar";
 import "./page-home.scss";
-// import "./Assets/icons/fontawesome";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -12,7 +11,7 @@ export default function Home() {
   return (
     <main>
       <section className="hero-header">
-        <h1 className="hero-header__title">Devrys<span>Creative</span></h1>
+        <h1 className="hero-header__title">Devrys<span> Creative</span></h1>
         <Image
           className="hero-header__photo"
           src={myPhoto}
@@ -34,6 +33,7 @@ export default function Home() {
         <div className="hero-header__scroll-indicator"><FontAwesomeIcon icon="caret-down" /></div>
       </section>
       <AppBar />
+      <section className="long-space">test</section>
       {/* <Biography />
       <Skills />
       <Projects />

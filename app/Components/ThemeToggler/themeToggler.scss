@@ -1,0 +1,29 @@
+@use "../../colors-dark.scss";
+
+.theme-toggler {
+    position: relative;
+    border-radius: 50vh;
+    background: colors-dark.$secondary-color;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    width: 80px;
+    padding: 10px;
+    color: colors-dark.$primary-color;
+    cursor: pointer;
+    &::before {
+        content: ' ';
+        border-radius: 50%;
+        position: absolute;
+        top:0; left:0;
+        height: 40px; width: 40px;
+        background: colors-dark.$cta-color;
+        transition: transform 0.3s ease;
+    }
+    &--light::before {
+        transform: translateX(0);
+    }
+    &--dark::before {
+        transform: translateX(40px);
+    }
+}
