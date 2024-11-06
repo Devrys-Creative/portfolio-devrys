@@ -1,0 +1,49 @@
+@use '../../colors-dark.scss';
+
+$image-height: 200px;
+
+.project-card {
+    position: relative;
+    background-color: colors-dark.$primary-color;
+    color: colors-dark.$secondary-color;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto;
+    &:hover > &__summary {
+        opacity: 1;
+    }
+    &__image {
+        object-fit: cover;
+        height: $image-height; width: 100%;
+        grid-column: 1 / span 2;
+    }
+    &__summary {
+        padding: 20px;
+        background-color: rgba(0,0,0,0.6);
+        width: 100%; height: $image-height;
+        position: absolute;
+        top:0;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__title , &__tech {
+        padding: 10px;
+    }
+    &__title {
+        font-size: 1.2em;
+        font-family: "speculum";
+    }
+    &__tech {
+        font-size: 2em;
+        display: flex;
+        gap:10px;
+        align-items: center;
+        justify-content: end;
+    }
+}

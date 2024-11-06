@@ -6,6 +6,7 @@ import { AppBar } from "./Components/AppBar/AppBar";
 import "./page-home.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ProjectCard } from "./Components/ProjectCard/ProjectCard";
 
 export default function Home() {
   return (
@@ -33,6 +34,37 @@ export default function Home() {
         <div className="hero-header__scroll-indicator"><FontAwesomeIcon icon="caret-down" /></div>
       </section>
       <AppBar />
+      <section className="projects" id='projects'>
+        <h2 className="projects__title">Quelques uns de mes projets</h2>
+        <ProjectCard
+          src=""
+          alt=""
+          title="title"
+          summary="summary"
+          techList={["react","js"]}
+        />
+        <ProjectCard
+          src=""
+          alt=""
+          title="title"
+          summary="summary"
+          techList={["react","js"]}
+        />
+        <ProjectCard
+          src=""
+          alt=""
+          title="title"
+          summary="summary"
+          techList={["react","js"]}
+        />
+        <ProjectCard
+          src=""
+          alt=""
+          title="title"
+          summary="summary"
+          techList={["react","js"]}
+        />
+      </section>
       <section className="long-space">test</section>
       {/* <Biography />
       <Skills />

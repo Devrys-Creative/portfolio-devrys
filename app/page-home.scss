@@ -7,7 +7,7 @@
     transform: translateY(0);
   }
   100% {
-    transform: translateY(30px);
+    transform: translateY(-30px);
   }
 }
 .hero-header {
@@ -18,8 +18,8 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 50px;
-  padding-bottom: 80px;
+  gap: 30px;
+  padding-bottom: 0px;
   &__title {
     font-family: "fluoxetine";
     font-size: 4em;
@@ -49,14 +49,28 @@
   }
   &__scroll-indicator {
     position: absolute;
-    bottom: 10%; // fix when everything around is responsive
-    right: 10%;
-    font-size: 3em;
+    bottom: 0;
+    left: 0; right: 0;
+    font-size: 2.5em;
     color: #ffffff;
     overflow: visible;
     animation: bouncing 1s ease 5s infinite alternate;
   }
 }
+
+// projects section
+.projects {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(3,400px);
+  grid-auto-rows: masonry;
+  gap:50px;
+  &__title {
+    grid-column: 1 / span 3;
+  }
+
+}
+
 
 // appbar
 // long space
