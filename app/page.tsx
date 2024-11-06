@@ -8,6 +8,7 @@ import "./page-home.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ProjectCard } from "./Components/ProjectCard/ProjectCard";
 import { ContactForm } from "./Components/ContactForm/ContactForm";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -32,10 +33,16 @@ export default function Home() {
           <FontAwesomeIcon icon={["fab", "php"]} />
           {/* < li>Redux / next/ nuxt / angular / symfony </li> */}
         </div>
-        <div className="hero-header__scroll-indicator"><FontAwesomeIcon icon="caret-down" /></div>
+        <div className="hero-header__scroll-indicator"><Link href="/#about"><FontAwesomeIcon icon="caret-down" /></Link></div>
       </section>
+
       <AppBar />
-      <section className="projects" id='projects'>
+
+      <section className="about scroll-margin" id="about">
+        <h2 className="about__title">A propos de moi</h2>
+      </section>
+
+      <section className="projects scroll-margin" id='projects'>
         <h2 className="projects__title">Quelques uns de mes projets</h2>
         <ProjectCard
           src=""
@@ -66,7 +73,7 @@ export default function Home() {
           techList={["react","js"]}
         />
       </section>
-      <section className="contact" id="contact">
+      <section className="contact scroll-margin" id="contact">
         <h2 className="contact__title">Une mission ou un poste à me proposer ?</h2>
         <ContactForm />
       </section>
