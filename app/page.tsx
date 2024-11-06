@@ -7,6 +7,7 @@ import "./page-home.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ProjectCard } from "./Components/ProjectCard/ProjectCard";
+import { ContactForm } from "./Components/ContactForm/ContactForm";
 
 export default function Home() {
   return (
@@ -65,11 +66,13 @@ export default function Home() {
           techList={["react","js"]}
         />
       </section>
+      <section className="contact" id="contact">
+        <h2 className="contact__title">Une mission ou un poste à me proposer ?</h2>
+        <ContactForm />
+      </section>
       <section className="long-space">test</section>
       {/* <Biography />
-      <Skills />
-      <Projects />
-      <Contact /> */}
+      <Skills /> */}
     </main>
   );
 }
