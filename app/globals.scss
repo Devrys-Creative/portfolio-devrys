@@ -3,13 +3,12 @@
 html,
 body {
   max-width: 100vw;
-  // overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
   color: colors-dark.$primary-color;
   background: colors-dark.$secondary-color;
-  scroll-behavior: smooth;
 }
 
 * {
