@@ -39,42 +39,42 @@ export default function Home() {
       <AppBar />
 
       <section className="main-section main-section--scroll-margin about" id="about">
-        <h2 className="main-section__title about__title">A propos de moi</h2>
+        <h2 className="main-section__title about__title"><FontAwesomeIcon icon="id-card-clip" /> A propos de moi</h2>
       </section>
 
       <section className="main-section main-section--scroll-margin projects" id='projects'>
-        <h2 className="main-section__title projects__title">Quelques uns de mes projets</h2>
+        <h2 className="main-section__title projects__title"><FontAwesomeIcon icon="code" /> Quelques uns de mes projets</h2>
         <ProjectCard
           src=""
           alt=""
-          title="title"
+          title="title1"
           summary="summary"
           techList={["react","js"]}
         />
         <ProjectCard
           src=""
           alt=""
-          title="title"
+          title="title2"
           summary="summary"
           techList={["react","js"]}
         />
         <ProjectCard
           src=""
           alt=""
-          title="title"
+          title="title3"
           summary="summary"
           techList={["react","js"]}
         />
         <ProjectCard
           src=""
           alt=""
-          title="title"
+          title="title4"
           summary="summary"
           techList={["react","js"]}
         />
       </section>
       <section className="main-section main-section--scroll-margin contact" id="contact">
-        <h2 className="main-section__title contact__title">Une mission ou un poste à me proposer ?</h2>
+        <h2 className="main-section__title contact__title"><FontAwesomeIcon icon="comment-dots" /> Une mission ou un poste à me proposer ?</h2>
         <ContactForm />
       </section>
     </main>

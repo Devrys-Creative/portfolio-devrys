@@ -2,6 +2,7 @@ import Image from "next/image";
 import "./projectCard.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconName } from "@fortawesome/fontawesome-svg-core";
+import Link from "next/link";
 
 interface projectCardProps {
     src: string,
@@ -13,6 +14,7 @@ interface projectCardProps {
 export const ProjectCard:React.FC<projectCardProps> = ({src,alt,title,summary,techList}) => {
 
     return (
+        <Link href={`/project/${title}`}>
         <article className="project-card">
             <Image
                 className="project-card__image"
@@ -28,5 +30,6 @@ export const ProjectCard:React.FC<projectCardProps> = ({src,alt,title,summary,te
                 {techList.map(tech => (<FontAwesomeIcon key={`${title.trim()}${tech}`} icon={["fab",tech]} />)) }
             </div>
         </article>
+        </Link>
     );
 };

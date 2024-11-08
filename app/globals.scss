@@ -31,6 +31,9 @@ a {
     text-align: center;
     font-size: 2rem;
     border-top: 3px solid colors-dark.$cta-color;
+    svg {
+      color: colors-dark.$cta-color;
+    }
   }
 }
 
