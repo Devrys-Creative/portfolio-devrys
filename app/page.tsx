@@ -77,9 +77,6 @@ export default function Home() {
         <h2 className="contact__title">Une mission ou un poste à me proposer ?</h2>
         <ContactForm />
       </section>
-      <section className="long-space">test</section>
-      {/* <Biography />
-      <Skills /> */}
     </main>
   );
 }
