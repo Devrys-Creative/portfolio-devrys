@@ -2,6 +2,7 @@
     {
         "id": 1,
         "title": "Volaie & Cochonouille",
+        "url": "https://https://volaie-et-cochonouille.souffrantisme.pm/",
         "summary": "Développé au sein du Projet Méduses, ce site satyrique est la vitrine d'un élevage souffrantiste fictif.",
         "image": "/Assets/images/projects/1.mini.webp",
         "tags": ["html5","css3","ts","react","next"],
@@ -13,6 +14,7 @@
     {
         "id": 2,
         "title": "Garage Colin-Martin",
+        "url": "https://garage-colin-martin.com",
         "summary": "Site vitrine du garage de mon père, donc je suis le webmaster depuis de nombreuses années.",
         "image": "/Assets/images/projects/2.mini.webp",
         "tags": ["html5","css3","js"],

@@ -5,6 +5,7 @@ import path from 'path';
 export interface ProjectInterface {
         id: number,
         title: string,
+        url: string,
         summary: string,
         image: string,
         tags: string[],
