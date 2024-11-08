@@ -38,12 +38,12 @@ export default function Home() {
 
       <AppBar />
 
-      <section className="about scroll-margin" id="about">
-        <h2 className="about__title">A propos de moi</h2>
+      <section className="main-section main-section--scroll-margin about" id="about">
+        <h2 className="main-section__title about__title">A propos de moi</h2>
       </section>
 
-      <section className="projects scroll-margin" id='projects'>
-        <h2 className="projects__title">Quelques uns de mes projets</h2>
+      <section className="main-section main-section--scroll-margin projects" id='projects'>
+        <h2 className="main-section__title projects__title">Quelques uns de mes projets</h2>
         <ProjectCard
           src=""
           alt=""
@@ -73,8 +73,8 @@ export default function Home() {
           techList={["react","js"]}
         />
       </section>
-      <section className="contact scroll-margin" id="contact">
-        <h2 className="contact__title">Une mission ou un poste à me proposer ?</h2>
+      <section className="main-section main-section--scroll-margin contact" id="contact">
+        <h2 className="main-section__title contact__title">Une mission ou un poste à me proposer ?</h2>
         <ContactForm />
       </section>
     </main>

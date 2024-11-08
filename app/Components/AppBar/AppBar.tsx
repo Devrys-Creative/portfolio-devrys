@@ -13,8 +13,7 @@ export const AppBar = () => {
         <header className="appbar">
             <nav className="appbar__menu">
                 <Link className="appbar__menu__home" href="/">Devrys-Creative</Link>
-                <Link href="/#about"><FontAwesomeIcon icon="id-card-clip" /> Moi</Link>
-                <Link href="/#skills"><FontAwesomeIcon icon="ranking-star" /> Mes compétences</Link>
+                <Link href="/#about"><FontAwesomeIcon icon="id-card-clip" /> À propos de moi</Link>
                 <Link href="/#projects"><FontAwesomeIcon icon="code" /> Mes projets</Link>
                 <Link href="/#contact"><FontAwesomeIcon icon="comment-dots" /> Me contacter</Link>
             </nav>
