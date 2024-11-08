@@ -93,8 +93,9 @@ export const ContactForm = () => {
                             required: requiredMessage,
                         })}
                         className={`contact-form__fieldset__select ${errors.object && 'contact-form__fieldset__select--error'} ${!errors.object && dirtyFields.object && 'contact-form__fieldset__select--valid'}`}
+                        defaultValue=""
                     >
-                        <option selected hidden value="" className="contact-form__fieldset__select__placeholder">Pourquoi souhaitez-vous me contacter ?</option>
+                        <option hidden value="" className="contact-form__fieldset__select__placeholder">Pourquoi souhaitez-vous me contacter ?</option>
                         <option value="mission">Proposer une mission (freelance)</option>
                         <option value="job">Proposer un poste</option>
                         <option value="other">Autre</option>

@@ -14,7 +14,7 @@ interface projectCardProps {
 export const ProjectCard:React.FC<projectCardProps> = ({src,alt,title,summary,techList}) => {
 
     return (
-        <Link href={`/project/${title}`}>
+        <Link href={`/project/${title.replace(/[^a-zA-Z0-9_-]/g,'-')}`}>
         <article className="project-card">
             <Image
                 className="project-card__image"

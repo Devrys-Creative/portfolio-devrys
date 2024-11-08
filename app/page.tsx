@@ -6,11 +6,11 @@ import { AppBar } from "./Components/AppBar/AppBar";
 import "./page-home.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ProjectCard } from "./Components/ProjectCard/ProjectCard";
 import { ContactForm } from "./Components/ContactForm/ContactForm";
 import Link from "next/link";
+import { ProjectsList } from "./Components/ProjectsList/ProjectsList";
 
-export default function Home() {
+const Home = () => {
   return (
     <main>
       <section className="hero-header">
@@ -44,34 +44,7 @@ export default function Home() {
 
       <section className="main-section main-section--scroll-margin projects" id='projects'>
         <h2 className="main-section__title projects__title"><FontAwesomeIcon icon="code" /> Quelques uns de mes projets</h2>
-        <ProjectCard
-          src=""
-          alt=""
-          title="title1"
-          summary="summary"
-          techList={["react","js"]}
-        />
-        <ProjectCard
-          src=""
-          alt=""
-          title="title2"
-          summary="summary"
-          techList={["react","js"]}
-        />
-        <ProjectCard
-          src=""
-          alt=""
-          title="title3"
-          summary="summary"
-          techList={["react","js"]}
-        />
-        <ProjectCard
-          src=""
-          alt=""
-          title="title4"
-          summary="summary"
-          techList={["react","js"]}
-        />
+        <ProjectsList />
       </section>
       <section className="main-section main-section--scroll-margin contact" id="contact">
         <h2 className="main-section__title contact__title"><FontAwesomeIcon icon="comment-dots" /> Une mission ou un poste à me proposer ?</h2>
@@ -80,3 +53,5 @@ export default function Home() {
     </main>
   );
 }
+
+export default Home;
