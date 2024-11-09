@@ -1,15 +1,27 @@
-
-import myPhoto from "./Assets/images/head.webp";
-
+// next & react importation
 import Image from "next/image";
+import Link from "next/link";
+import { Metadata } from "next";
+
+// custom importation
 import { AppBar } from "./Components/AppBar/AppBar";
+import { ProjectsList } from "./Components/ProjectsList/ProjectsList";
+import { ContactForm } from "./Components/ContactForm/ContactForm";
+
+// fontawesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+// style
+import myPhoto from "./Assets/images/head.webp";
 import "./page-home.scss";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ContactForm } from "./Components/ContactForm/ContactForm";
-import Link from "next/link";
-import { ProjectsList } from "./Components/ProjectsList/ProjectsList";
+// metadata management
+export const metadata: Metadata = {
+  title: "Devrys - portfolio",
+  description: "Portfolio de développeur·euse",
+};
 
+// Home page component
 const Home = () => {
   return (
     <main>
