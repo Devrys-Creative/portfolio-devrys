@@ -1,4 +1,5 @@
 @use "./colors-dark.scss";
+@use "sass:color";
 
 
 // hero header
@@ -55,6 +56,52 @@
     color: #ffffff;
     overflow: visible;
     animation: bouncing 1s ease 5s infinite alternate;
+  }
+}
+
+// About section
+.about {
+  &__title {
+
+  }
+  &__article {
+    margin: 50px;
+    &:first-of-type {
+      margin-top: 0;
+    }
+    padding: 50px;
+    border: 2px solid transparent;
+    background-color: colors-dark.$primary-color;
+    color: colors-dark.$secondary-color;
+    &__title {
+      font-size: 2.2em;
+      text-align: center;
+    }
+    &__text {
+      font-size: 1.4em;
+      text-indent: 50px;
+      text-align: justify;
+      margin: 50px 0;
+      strong {
+        background-color: #fff;
+        font-weight: normal;
+      }
+      a:hover {
+        background-color: #fff;
+      }
+      &--center {
+        text-align: center;
+        text-indent: 0;
+      }
+    }
+    &__logo {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      img {
+        filter: drop-shadow(5px 5px 5px colors-dark.$secondary-color);
+      }
+    }
   }
 }
 
