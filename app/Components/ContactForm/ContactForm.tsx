@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 
 export const ContactForm = () => {
     const { handleSubmit, register, formState: { errors, dirtyFields, isValid }, watch } = useForm({
@@ -84,6 +85,7 @@ export const ContactForm = () => {
                         className={`contact-form__fieldset__input ${errors.phone && 'contact-form__fieldset__input--error'} ${!errors.phone && dirtyFields.phone && 'contact-form__fieldset__input--valid'}`}
                     />
                 </div>
+                <p className="contact-form__privacy">En soumettant ce formulaire, vous consentez à ce que vos données soient utilisées pour répondre à votre demande. Pour plus d&apos;informations, vous pouvez consulter <Link href="/legal-and-privacy">la politique de confidentialité</Link>.</p>
             </fieldset>
             <fieldset className="contact-form__fieldset">
                 <div>
@@ -114,7 +116,6 @@ export const ContactForm = () => {
                     </textarea>
                 </div>
             </fieldset>
-
             <button className="contact-form__button" disabled={!isValid}>{<FontAwesomeIcon icon={faEnvelope} /> } Envoyer le message</button>
         </form>
     )

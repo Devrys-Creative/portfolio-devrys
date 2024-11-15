@@ -55,6 +55,11 @@
             }
         }
     }
+    &__privacy {
+        a {
+            color: colors-dark.$cta-color;
+        }
+    }
     &__button {
         background-color: colors-dark.$cta-color;
         padding: 20px;
