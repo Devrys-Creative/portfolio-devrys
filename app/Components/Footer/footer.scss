@@ -1,0 +1,10 @@
+@use "../../colors-dark.scss";
+
+.page-footer {
+    background-color: colors-dark.$primary-color;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: colors-dark.$secondary-color;
+}

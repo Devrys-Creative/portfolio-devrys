@@ -1,0 +1,15 @@
+
+.legal-and-privacy-page {
+    padding: 50px;
+    &__title {
+        text-align: center;
+    }
+    &__section {
+        &__title {
+            margin: 30px 10px;
+        }
+        &__subtitle {
+            margin: 10px;
+        }
+    }
+}
