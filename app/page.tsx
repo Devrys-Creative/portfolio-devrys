@@ -14,27 +14,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // style
 import "./page-home.scss";
 import myPhoto from "./Assets/images/head.webp";
-import logoHTML from "./Assets/icons/html-5.svg";
-import logoCSS from "./Assets/icons/css-3.svg";
-import logoPHP from "./Assets/icons/php.svg";
-import logoPython from "./Assets/icons/python.svg";
-import logoC from "./Assets/icons/c.svg";
-import logoCpp from "./Assets/icons/cpp.svg";
-import logoJS from "./Assets/icons/js.svg";
-import logoVet from "./Assets/icons/vet.svg";
-import logoTS from "./Assets/icons/ts.svg";
-import logoOC from "./Assets/icons/OC.svg";
-import logoReact from "./Assets/icons/react.svg";
-import logoRedux from "./Assets/icons/redux.svg";
-import logoNext from "./Assets/icons/next-js.svg";
-import logoVue from "./Assets/icons/vue.svg";
-import logoNuxt from "./Assets/icons/nuxt.svg";
-import logoAngular from "./Assets/icons/angular.svg";
-import logoSf from "./Assets/icons/symfony.svg";
-import logoGit from "./Assets/icons/git.svg";
-import logoGitHub from "./Assets/icons/github-color.svg";
-import logoGitLab from "./Assets/icons/gitlab.svg";
-import logoDocker from "./Assets/icons/docker.svg";
+import {svgRepoImages} from "./Assets/icons/svgRepo";
+const {logoAngular,logoC,logoCSS,logoCpp,logoDocker,logoGit,logoGitHub,logoGitLab,logoHTML,logoJS,logoNext,logoNuxt,logoOC,logoPHP,logoPython,logoReact,logoRedux,logoSf,logoTS,logoVet,logoVue} = svgRepoImages;
 
 // metadata management
 export const metadata: Metadata = {
@@ -237,7 +218,9 @@ const Home = () => {
 
       <section className="main-section main-section--scroll-margin projects" id='projects'>
         <h2 className="main-section__title projects__title"><FontAwesomeIcon icon="code" /> Quelques uns de mes projets</h2>
-        <ProjectsList />
+        <div className="projects__projects-list">
+          <ProjectsList />
+        </div>
       </section>
       <section className="main-section main-section--scroll-margin contact" id="contact">
         <h2 className="main-section__title contact__title"><FontAwesomeIcon icon="comment-dots" /> Une mission ou un poste à me proposer ?</h2>

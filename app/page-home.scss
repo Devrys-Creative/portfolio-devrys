@@ -107,13 +107,14 @@
 
 // projects section
 .projects {
-  padding: 50px;
-  display: grid;
-  grid-template-columns: repeat(3,400px);
-  grid-auto-rows: masonry;
-  gap:50px;
   &__title {
     grid-column: 1 / span 3;
+  }
+  &__projects-list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3,400px);
+    gap: 50px;
   }
 
 }

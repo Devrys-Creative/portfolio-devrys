@@ -12,11 +12,12 @@ export const ProjectsList = async () => {
         { projectsData?.map(project => (
             <ProjectCard
                 key={project.id}
+                video={project.video}
                 src={project.image}
-                alt=""
+                alt="capture du projet"
                 title={project.title}
-                summary="summary"
-                techList={["react","js"]}
+                summary={project.summary}
+                techList={project.tags}
             />
         ))}
         </>
