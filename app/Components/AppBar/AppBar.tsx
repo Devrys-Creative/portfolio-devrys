@@ -8,7 +8,7 @@ import { AppBarMenuMarker } from "../ApparMenuMarker/AppBarMenuMarker";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 // import { useTheme } from "@/app/Hooks/useTheme";
 
-export const AppBar = () => {
+export const AppBar = ({menuMarker = false}) => {
 
     // const {theme, toggleTheme} = useTheme();
 
@@ -40,7 +40,7 @@ export const AppBar = () => {
             <nav className="appbar__menu">
                 
                 <Link className="appbar__menu__home" href="/">Devrys-Creative</Link>
-                <AppBarMenuMarker sectionsList={sectionsList} />
+                {menuMarker && <AppBarMenuMarker sectionsList={sectionsList} /> }
                 {sectionsList.map(section => (
                     <Link
                         className="appbar__menu__link"

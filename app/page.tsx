@@ -53,7 +53,7 @@ const Home = () => {
         <div className="hero-header__scroll-indicator"><Link href="/#about"><FontAwesomeIcon icon="caret-down" /></Link></div>
       </section>
 
-      <AppBar />
+      <AppBar menuMarker={true} />
 
       <section className="main-section main-section--scroll-margin about" id="about">
         <h2 className="main-section__title about__title"><FontAwesomeIcon icon="id-card-clip" /> À propos de moi</h2>

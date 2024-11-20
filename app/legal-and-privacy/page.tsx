@@ -52,7 +52,11 @@ const legalAndPrivacyPage = () => {
                 </section>
                 <section className="legal-and-privacy-page__section">
                     <h2 className="legal-and-privacy-page__section__title"><FontAwesomeIcon icon="copyright" /> Propriété intellectuelle</h2>
-                    <p>Tous les contenus présents sur ce site (textes, images, logos, etc.) sont protégés par le droit d’auteur. Toute reproduction ou représentation, totale ou partielle, sans autorisation préalable est interdite.</p>
+                    <p>Tous les contenus présents sur ce site (textes, images, logos, etc.) sont sous licence MIT :</p>
+                    <p>Copyright 2024 Sylvain Maitrehenry (Devrys Creative)</p>
+                    <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+                    <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+                    <p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
                 </section>
                 <section className="legal-and-privacy-page__section">
                     <h2 className="legal-and-privacy-page__section__title"><FontAwesomeIcon icon="user-shield" /> Limitation de responsabilité</h2>

@@ -50,7 +50,8 @@ a {
   box-shadow: 5px 5px 5px #000;
   &--big {
     font-size: 2em;
-    padding: 10px;
+    padding: 30px;
+    border-radius: 0 10px 0 10px;
   }
 }
 
