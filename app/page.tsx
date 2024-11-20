@@ -59,8 +59,8 @@ const Home = () => {
         <h2 className="main-section__title about__title"><FontAwesomeIcon icon="id-card-clip" /> À propos de moi</h2>
 
         <article className="about__article">
-          <h3 className="about__article__title">Autodidacte depuis les années 2000</h3>
-          <p className="about__article__text">Développeur web <strong>autodidacte depuis les années 2000</strong>, j’ai découvert principalement HTML, CSS et PHP, notamment grâce au Site du Zéro. J’ai aussi appris des rudiments de C, C++, Python et JavaScript. Attiré par <strong>la créativité et le partage d’informations</strong>, j’ai réalisé des sites personnels, associatifs et plus tard des applications professionnelles adaptées aux besoins de mon équipe en tant que directeur de clinique.</p>
+          <h3 className="about__article__title">Autodidacte passionné</h3>
+          <p className="about__article__text">Développeur web <strong>autodidacte passionné depuis les années 2000</strong>, j’ai découvert principalement HTML, CSS et PHP, notamment grâce au Site du Zéro. J’ai aussi appris des rudiments de C, C++, Python et JavaScript. Attiré par <strong>la créativité et le partage d’informations</strong>, j’ai réalisé des sites personnels, associatifs et plus tard des applications professionnelles adaptées aux besoins de mon équipe en tant que directeur de clinique.</p>
           <div className="about__article__logo">
             <Image
               src={logoHTML}
@@ -211,6 +211,8 @@ const Home = () => {
             />
           </div>
           <p className="about__article__text">Je recherche une opportunité professionnelle me permettant de concilier travail et vie familiale. Je suis particulièrement efficace en télétravail et dispose de tout l’équipement pour un contact fluide avec l’équipe et les client·es. D’un naturel curieux, je me ferai un plaisir de vous assister dans la concrétisation de vos projets.</p>
+        </article>
+        <article className="about__article about__article--centered">
           <p className="about__article__text about__article__text--center"><Link href="/#contact" className="cta-button cta-button--big"><FontAwesomeIcon icon="envelope" /> Contactez moi</Link></p>
         </article>
         
