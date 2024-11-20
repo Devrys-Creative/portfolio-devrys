@@ -28,6 +28,21 @@
         "problem": "",
         "solution": "",
         "evolution": ""
+    },
+    {
+        "id": 3,
+        "title": "À pieds joints dans les flaques",
+        "url": "https://danslesflaques.fr",
+        "source": "",
+        "summary": "Développé pour le collectif \"Le vent sème\" pour leur projet d'école \"À pieds joints dans les flaques\", ce site présente le projet d'école en Savoie.",
+        "video": "",
+        "image": "/thumbs/projects/apjdlf.jpg",
+        "imageAlt": "capture d'écran du site du projet d'école \"À pieds joints dans les flaques\"",
+        "tags": ["HTML","CSS","JS"],
+        "context": "",
+        "problem": "",
+        "solution": "",
+        "evolution": ""
     }
   ]
   

@@ -1,0 +1,8 @@
+@use '../../colors-dark.scss';
+
+.menu-marker {
+    position: absolute;
+    transition: all 0.3s ease;
+    border-radius: 0 0 10px 10px;
+    background: radial-gradient(ellipse, colors-dark.$cta-color, transparent 60%);//linear-gradient(to top, transparent, colors-dark.$cta-color, transparent 40%);
+}

@@ -1,5 +1,6 @@
 import logoHTML from "./svg-repo/html-5.svg";
-import logoCSS from "./svg-repo/css-3.svg";
+// import logoCSS from "./svg-repo/css-3.svg";
+import logoCSS from "./official/CSS Logo.svg";
 import logoPHP from "./svg-repo/php.svg";
 import logoPython from "./svg-repo/python.svg";
 import logoC from "./svg-repo/c.svg";
