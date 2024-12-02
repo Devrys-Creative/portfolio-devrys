@@ -1,6 +1,7 @@
 import logoHTML from "./svg-repo/html-5.svg";
 // import logoCSS from "./svg-repo/css-3.svg";
 import logoCSS from "./official/CSS Logo.svg";
+import logoSASS from "./svg-repo/sass.svg";
 import logoPHP from "./svg-repo/php.svg";
 import logoPython from "./svg-repo/python.svg";
 import logoC from "./svg-repo/c.svg";
@@ -20,9 +21,13 @@ import logoGit from "./svg-repo/git.svg";
 import logoGitHub from "./svg-repo/github-color.svg";
 import logoGitLab from "./svg-repo/gitlab.svg";
 import logoDocker from "./svg-repo/docker.svg";
+import logoBug from "./svg-repo/bug.svg";
+import logoJest from "./svg-repo/jest-svgrepo-com.svg";
+import logoSEO from "./svg-repo/seo-svgrepo-com.svg";
+import logoSwagger from "./svg-repo/swagger-svgrepo-com.svg";
 
 type ImageMap = {
     [key: string] : string,
 }
 
-export const svgRepoImages:ImageMap = {logoAngular,logoC,logoCSS,logoCpp,logoDocker,logoGit,logoGitHub,logoGitLab,logoHTML,logoJS,logoNext,logoNuxt,logoOC,logoPHP,logoPython,logoReact,logoRedux,logoSf,logoTS,logoVet,logoVue};
+export const svgRepoImages:ImageMap = {logoAngular,logoC,logoCSS,logoSASS,logoCpp,logoDocker,logoGit,logoGitHub,logoGitLab,logoHTML,logoJS,logoNext,logoNuxt,logoOC,logoPHP,logoPython,logoReact,logoRedux,logoSf,logoTS,logoVet,logoVue,logoBug,logoJest,logoSEO,logoSwagger};

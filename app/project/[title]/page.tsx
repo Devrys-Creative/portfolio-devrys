@@ -7,6 +7,8 @@ import { getProjectByTitle } from '@/app/Data/getProjectsData';
 // style
 import './page-project.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { svgRepoImages } from '@/app/Assets/icons/svgRepo';
+import Link from 'next/link';
 
 
 // props interface
@@ -42,22 +44,40 @@ const ProjectPage:React.FC<projectProps> = async ({params}) => {
         <AppBar />
         { title && (
             <main className='project-page'>
-                <h1 className='project-page__main-title'>{projectData.title}</h1>
-                <Image
-                    className='project-page__main-image'
-                    src={projectData.image}
-                    alt="Capture d'écran du projet"
-                    width={300}
-                    height={300}
-                    priority
-                />
-                <div className='project-page__main-link'>
-                    <FontAwesomeIcon icon="arrow-up-right-from-square" className='project-page__main-link__icon'/>
-                    <a href={projectData.url} target="_blank">{projectData.url}</a>
-                    <a href={projectData.source} target="_blank">{projectData.source}</a>
-                </div>
-                <p>tags ?</p>
+                
+                <Link href="/#projects" className='project-page__prev-link'>&lt; Retour</Link>
 
+                <div className='project-page__banner'>
+                    <Image
+                        className='project-page__banner__main-image'
+                        src={`/projects/cover/${projectData.image}`}
+                        alt="Capture d'écran du projet"
+                        width={1200}
+                        height={300}
+                        priority
+                    />
+                    <div className='project-page__banner__main-links'>
+                        { projectData.url && (<a href={projectData.url} target="_blank"><FontAwesomeIcon icon="arrow-up-right-from-square" className='project-page__banner__main-links__icon'/> Visiter</a>) }
+                        { projectData.source && (<a href={projectData.source} target="_blank"><FontAwesomeIcon icon={["fab","github"]} className='project-page__banner__main-links__icon'/> Sources</a>) }
+                    </div>
+                </div>
+
+                <h1 className='project-page__main-title'>{projectData.title}</h1>
+
+                <div className='project-page__tags-list'>
+                    {projectData.tags.map(tech => (
+                            // <FontAwesomeIcon key={`${title.trim()}${tech}`} icon={["fab",tech]} />
+                            <Image
+                                key={`img_${tech}`}
+                                src={svgRepoImages[`logo${tech}`]}
+                                alt={`logo de la technologie de développement ${tech}`}
+                                height={60}
+                                width={60}
+                            />
+                        )) }
+                </div>
+
+                {projectData.context && (
                 <section className='project-page__section project-page__context'>
                     <h2 className='project-page__section__title project-page__context__title'><FontAwesomeIcon icon="clipboard-user" /> Contexte du projet</h2>
                     <div
@@ -66,7 +86,9 @@ const ProjectPage:React.FC<projectProps> = async ({params}) => {
                         }
                     />
                 </section>
+                )}
                 
+                {projectData.problem && (
                 <section className='project-page__section project-page__problem'>
                     <h2 className='project-page__section__title project-page__problem__title'><FontAwesomeIcon icon="clipboard-question" /> Problématique</h2>
                     <div
@@ -75,7 +97,9 @@ const ProjectPage:React.FC<projectProps> = async ({params}) => {
                         }
                     />
                 </section>
+                )}
                 
+                {projectData.solution && (
                 <section className='project-page__section project-page__solution'>
                     <h2 className='project-page__section__title project-page__solution__title'><FontAwesomeIcon icon="clipboard-check" /> Solution apportée</h2>
                     <div
@@ -84,7 +108,9 @@ const ProjectPage:React.FC<projectProps> = async ({params}) => {
                         }
                     />
                 </section>
+                )}
                 
+                {projectData.evolution && (
                 <section className='project-page__section project-page__evolution'>
                     <h2 className='project-page__section__title project-page__evolution__title'><FontAwesomeIcon icon="clipboard-list" /> Évolution</h2>
                     <div
@@ -93,8 +119,8 @@ const ProjectPage:React.FC<projectProps> = async ({params}) => {
                         }
                     />
                 </section>
-
-                <p>DOM purify ?</p>
+                )}
+                
             </main>
         ) }
         </>

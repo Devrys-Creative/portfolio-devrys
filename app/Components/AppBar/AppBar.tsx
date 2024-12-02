@@ -53,10 +53,7 @@ export const AppBar = ({menuMarker = false}) => {
                     </Link>
                 ))}
             </nav>
-            <ThemeToggler>
-                <FontAwesomeIcon icon="sun" />
-                <FontAwesomeIcon icon="moon" />
-            </ThemeToggler>
+            <ThemeToggler />
         </header>
     )
 }

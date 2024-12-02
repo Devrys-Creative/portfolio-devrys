@@ -1,0 +1,80 @@
+@use "../../theme-colors.scss";
+
+.project-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+    &__prev-link {
+        font-style: italic;
+    }
+    &__banner {
+        position: relative;
+        &__main-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+
+        }
+        &__main-links {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            a {
+                background-color: var(--cta-color);
+                color: #000;
+                padding: 5px;
+                border-radius: 0 10px 0 10px;
+                font-size: 1.6em;
+                box-shadow: 0 0 10px var(--secondary-color);
+            }
+            &__icon {
+            }
+        }
+    }
+    &__main-title {
+        text-align: center;
+        margin: 50px;
+    }
+    &__tags-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    &__section {
+        max-width: 1000px;
+        margin: 0 auto;
+        margin-top: 50px;
+        &__title {
+            display: inline-block;
+            border-bottom: 5px solid var(--cta-color);
+            border-radius: 0 0 50px 0;
+            padding-right: 30px;
+            margin: 20px 0;
+        }
+        p {
+            text-indent: 50px;
+            margin-bottom: 10px;
+        }
+        ul {
+            margin-left: 30px;
+            margin-bottom: 10px;
+        }
+        strong {
+            border-bottom: var(--cta-color) 1px solid;
+            font-weight: normal;
+        }
+        a {
+            background-color: var(--cta-color);
+            color: #000;
+        }
+        img {
+            max-width: 100%;
+            padding: 10px;
+            border: var(--free-text-color) 1px solid;
+        }
+    }
+}

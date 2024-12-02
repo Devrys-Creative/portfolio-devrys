@@ -1,4 +1,4 @@
-@use "./colors-dark.scss";
+@use "./theme-colors.scss";
 
 @font-face {
   font-family: 'Luciole-regular';
@@ -28,14 +28,15 @@ body {
 }
 
 body {
-  color: colors-dark.$primary-color;
-  background: colors-dark.$secondary-color;
+  color: var(--free-text-color);
+  background: var(--background-color);
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  transition: background-color 300ms ease, color 300ms ease;
 }
 
 a {
@@ -44,7 +45,7 @@ a {
 }
 
 .cta-button {
-  background-color: colors-dark.$cta-color;
+  background-color: var(--cta-color);
   padding: 3px 7px;
   color: #000000;
   box-shadow: 5px 5px 5px #000;
@@ -56,20 +57,18 @@ a {
 }
 
 .main-section {
-  // padding: 50px;
   &--scroll-margin {
     scroll-margin-top: 130px;
   }
   &__title {
     font-size: 2.6rem;
     position: relative;
-    color: #fff;
+    color: var(--section-title-text-color);
     padding: 50px;
     svg {
-      color: colors-dark.$cta-color;
+      color: var(--cta-color);
       height: 1.2em;
       vertical-align: baseline;
-
     }
   }
 }

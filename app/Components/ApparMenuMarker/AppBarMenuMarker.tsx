@@ -42,30 +42,12 @@ export const AppBarMenuMarker:React.FC<AppBarMenuMarkerProps> = ({sectionsList})
     const [displayedSection, setDisplayedSection] = useState(sectionsList[0]);
     const [selectedMenuLink, setSelectedMenuLink] = useState(document.getElementById(`menu-${sectionsList[0].id}`) as HTMLElement);
     const [polygonCoords, setPolygonCoords] = useState([
-        {
-            x:0,
-            y:20,
-        },
-        {
-            x:50,
-            y:0,
-        },
-        {
-            x:100,
-            y:20,
-        },
-        {
-            x:80,
-            y:90,
-        },
-        {
-            x:50,
-            y:80,
-        },
-        {
-            x:20,
-            y:80,
-        }
+        {x:50,y:0,},
+        {x:93,y:25,},
+        {x:93,y:75,},
+        {x:50,y:100,},
+        {x:7,y:75,},
+        {x:7,y:25,},
     ])
 
     useEffect(() => {

@@ -1,8 +1,7 @@
-@use '../../colors-dark.scss';
 
 .menu-marker {
     position: absolute;
     transition: clip-path 2s linear, all 0.3s ease;
     border-radius: 0 0 10px 10px;
-    background-color: colors-dark.$cta-color;
+    background-color: var(--cta-color);
 }

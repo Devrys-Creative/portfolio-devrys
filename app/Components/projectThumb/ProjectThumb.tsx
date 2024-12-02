@@ -20,15 +20,15 @@ export const ProjectThumb:React.FC<ProjectThumbProps> = ({videoSource, imageSrc,
 
     return webmSupport ? (
             <video autoPlay loop muted className="project-card__thumb">
-                <source src={videoSource} type="video/webm" />
+                <source src={`/projects/thumbs/${videoSource}`} type="video/webm" />
             </video>
         ) : (
             <Image
                 className="project-card__thumb"
-                src={imageSrc}
+                src={`/projects/thumbs/${imageSrc}`}
                 alt={imageAlt}
-                width={400}
-                height={200}
+                width={500}
+                height={500}
                 priority
             />
         );

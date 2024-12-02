@@ -1,0 +1,13 @@
+@use "../ProjectCard/projectCard.scss";
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+  }
+}

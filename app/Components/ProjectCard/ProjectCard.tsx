@@ -24,19 +24,21 @@ export const ProjectCard:React.FC<projectCardProps> = ({video,src,alt,title,summ
                 imageSrc={src}
                 imageAlt={alt}
             />
-            <h3 className="project-card__title">{title}</h3>
-            <div className="project-card__summary">{summary}</div>
-            <div className="project-card__tech">
-                {techList.map(tech => (
-                    // <FontAwesomeIcon key={`${title.trim()}${tech}`} icon={["fab",tech]} />
-                    <Image
-                        key={`img_${tech}`}
-                        src={svgRepoImages[`logo${tech}`]}
-                        alt=""
-                        height={50}
-                        width={50}
-                    />
-                )) }
+            <h3 className="project-card__title">{title.replace(/[éèê]/gi,"e").replace(/[à]/gi,"a")}</h3>
+            <div className="project-card__summary">
+                <div>{summary}</div>
+                <div className="project-card__tech">
+                    {techList.map(tech => (
+                        // <FontAwesomeIcon key={`${title.trim()}${tech}`} icon={["fab",tech]} />
+                        <Image
+                            key={`img_${tech}`}
+                            src={svgRepoImages[`logo${tech}`]}
+                            alt={`logo de la technologie de développement ${tech}`}
+                            height={30}
+                            width={30}
+                        />
+                    )) }
+                </div>
             </div>
         </article>
         </Link>
