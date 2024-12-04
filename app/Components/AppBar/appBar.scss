@@ -14,10 +14,19 @@
     align-items: center;
     padding: 20px;
     &__menu {
-        position: relative;
         display: flex;
         align-items: center;
         gap: 50px;
+        @media screen and (max-width: 767px) {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            transform: translateX(-100%);
+            transition: transform 300ms ease;
+            flex-direction: column;
+            gap: 0;
+            background-color: var(--header-background-color);
+        }
         &__home {
             font-family: "fluoxetine";
             font-size: 1.2em;
@@ -38,6 +47,9 @@
             &--selected > &__icon {
                 color: var(--secondary-color);
             }
+        }
+        &--visible {
+            transform: translateY(0);
         }
     }
 }

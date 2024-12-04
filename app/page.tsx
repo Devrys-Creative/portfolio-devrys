@@ -13,7 +13,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // style
 import "./page-home.scss";
-import myPhoto from "./Assets/images/head.webp";
 import {svgRepoImages} from "./Assets/icons/svgRepo";
 const {logoAngular,logoC,logoCSS,logoCpp,logoDocker,logoGit,logoGitHub,logoGitLab,logoHTML,logoJS,logoNext,logoNuxt,logoOC,logoPHP,logoPython,logoReact,logoRedux,logoSf,logoTS,logoVet,logoVue} = svgRepoImages;
 
@@ -34,8 +33,8 @@ const Home = () => {
         <h1 className="hero-header__title">Devrys<span> Creative</span></h1>
         <Image
           className="hero-header__photo"
-          src={myPhoto}
-          alt="photo de sylvain maitrehenry"
+          src="/banner/head.png"
+          alt="dessin de sylvain maitrehenry entouré d'animaux, réalisé par son cousin Alexis"
           width={300}
           height={300}
           priority

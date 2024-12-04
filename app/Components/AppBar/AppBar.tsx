@@ -6,19 +6,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./appBar.scss";
 import { AppBarMenuMarker } from "../ApparMenuMarker/AppBarMenuMarker";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { BurgerMenuButton } from "../BurgerMenuButton/BurgerMenuButton";
 // import { useTheme } from "@/app/Hooks/useTheme";
 
 export const AppBar = ({menuMarker = false}) => {
 
-    // const {theme, toggleTheme} = useTheme();
-
-    
     // menu sections
     const sectionsList = [
         {
             id: "about",
             icon: "id-card-clip",
-            label: "À propos",
+            label: "Bio",
             offset: 0,
         },
         {
@@ -37,9 +35,9 @@ export const AppBar = ({menuMarker = false}) => {
 
     return (
         <header className="appbar">
+            <BurgerMenuButton />
+            <Link className="appbar__menu__home" href="/">Devrys-Creative</Link>
             <nav className="appbar__menu">
-                
-                <Link className="appbar__menu__home" href="/">Devrys-Creative</Link>
                 {menuMarker && <AppBarMenuMarker sectionsList={sectionsList} /> }
                 {sectionsList.map(section => (
                     <Link

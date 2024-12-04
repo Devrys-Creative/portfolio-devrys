@@ -6,6 +6,7 @@ import "./projectsList.scss";
 export const ProjectsList = async () => {
 
     const projectsData = await getAllProjectsData();
+
     const projectsPerRow = 4;
 
     const projectsChunks = [];
@@ -22,7 +23,7 @@ export const ProjectsList = async () => {
                             key={project.id}
                             video={project.video}
                             src={project.image}
-                            alt="capture du projet"
+                            alt={project.imageAlt}
                             title={project.title}
                             summary={project.summary}
                             techList={project.tags}

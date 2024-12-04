@@ -6,4 +6,9 @@
     flex-direction: row;
     justify-content: space-between;
     color: var(--secondary-color);
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
 }
