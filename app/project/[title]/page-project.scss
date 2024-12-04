@@ -4,6 +4,9 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 50px;
+    @media screen and (max-width: 767px) {
+      padding: 50px 20px;
+    }
     &__prev-link {
         font-style: italic;
     }
@@ -14,6 +17,9 @@
             height: 300px;
             object-fit: cover;
 
+            @media screen and (max-width: 767px) {
+                height: 200px;
+            }
         }
         &__main-links {
             position: absolute;
@@ -36,19 +42,29 @@
     }
     &__main-title {
         text-align: center;
-        margin: 50px;
+        margin: 50px 0;
     }
     &__tags-list {
         display: flex;
         flex-direction: row;
         justify-content: center;
         gap: 20px;
+        @media screen and (max-width: 767px) {
+            flex-wrap: wrap;
+            img {
+                max-height: 40px;
+                width: auto;
+            }
+        }
     }
     &__section {
         max-width: 1000px;
         margin: 0 auto;
         margin-top: 50px;
         font-size: 1.2em;
+        @media screen and (max-width: 767px) {
+            font-size: 1.4em;
+        }
         &__title {
             display: inline-block;
             border-bottom: 5px solid var(--cta-color);
