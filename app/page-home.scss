@@ -26,6 +26,9 @@
     span {
       color: var(--free-text-alt-color);
     }
+    @media screen and (max-width: 767px) {
+        font-size: 2.5em;
+    }
   }
   &__photo {
 
@@ -34,10 +37,16 @@
     font-family: "fluoxetine";
     font-size: 3em;
     color: var(--free-text-alt-color);
+    @media screen and (max-width: 767px) {
+        font-size: 2.5em;
+    }
   }
   &__job {
     font-size: 2em;
     font-family: "speculum";
+    @media screen and (max-width: 767px) {
+        font-size: 1.5em;
+    }
 
   }
   &__tech-list {
@@ -66,12 +75,12 @@
   display: grid;
   position: relative;
   grid-template-columns: repeat(2, auto);
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1100px) {
     grid-template-columns: 1fr;
   }
   &__title {
     grid-column: 1 / span 2;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1100px) {
       grid-column: 1 / span 1;
     }
   }
@@ -84,7 +93,7 @@
     &:nth-child(3),&:nth-child(4) {
       background-color:  var(--about-background-2);
     }
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1100px) {
       padding: 50px 20px;
       &:nth-child(2),&:nth-child(4) {
         background-color: var(--about-background-1);
@@ -101,7 +110,7 @@
       font-size: 1.2em;
       text-indent: 50px;
       margin: 50px 0;
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 1100px) {
         margin: 20px 0;
         font-size: 1.4em;
       }
@@ -121,12 +130,12 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 50px;
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 1100px) {
         gap: 20px;
       }
       img {
         filter: drop-shadow(5px 5px 5px var(--secondary-color));
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 1100px) {
           max-height: 30px;
           width: auto;
         }
@@ -135,7 +144,7 @@
     &--centered {
       grid-column: 1/span 2;
       background-color: unset;
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 1100px) {
         grid-column: 1 / span 1;
       }
     }

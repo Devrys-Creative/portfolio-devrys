@@ -10,6 +10,7 @@
     font-size: 1.4em;
     display: flex;
     flex-direction: row;
+    gap: 10px;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
@@ -30,7 +31,11 @@
         &__home {
             font-family: "fluoxetine";
             font-size: 1.2em;
-            margin-right: 30px;
+            padding-right: 30px;
+            @media screen and (max-width: 767px) {
+                padding: 0;
+                text-align: center;
+            }
         }
         &__link {
             display: flex;

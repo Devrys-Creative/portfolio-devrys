@@ -1,9 +1,13 @@
 
 .burger-menu {
+    display: none;
     cursor: pointer;
     height: 36px;
     width: 50px;
     position: relative;
+    @media screen and (max-width: 767px) {
+        display: block;
+    }
     &__icon {
         // display: none;
         position: absolute;
@@ -25,9 +29,6 @@
         }
         &::after {
             transform: translateY(16px);
-        }
-        @media screen and (max-width: 767px) {
-            display: block;
         }
     }
     &--active > &__icon {

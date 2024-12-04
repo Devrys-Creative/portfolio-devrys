@@ -57,6 +57,9 @@ a {
     font-size: 2em;
     padding: 30px;
     border-radius: 0 10px 0 10px;
+    @media screen and (max-width: 767px) {
+        font-size: 1.4em;
+    }
   }
 }
 
@@ -76,6 +79,13 @@ a {
       color: var(--cta-color);
       height: 1.2em;
       vertical-align: baseline;
+      @media screen and (max-width: 767px) {
+          height: 1em;
+      }
+    }
+    @media screen and (max-width: 767px) {
+        font-size: 2.2em;
+        padding: 50px 20px;
     }
   }
 }
