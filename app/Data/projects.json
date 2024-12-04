@@ -38,10 +38,10 @@
         "video": "",
         "image": "apjdlf.png",
         "imageAlt": "capture d'écran du site du projet d'école \"À pieds joints dans les flaques\"",
-        "tags": ["HTML","CSS","SASS","JS"],
+        "tags": ["HTML","CSS","SASS","JS","PHP"],
         "context": "<p>En 2021, plusieurs jeunes parents se retrouvent autour de valeurs communes, notamment d'une éducation bienveillante et différente, permettant à chaque enfant de se développer sans violence. Progressivement, le collectif \"Le vent sème\" est né, avec pour projet celui de créer une école. Le projet n'a actuellement pas encore abouti, mais le site est toujours en ligne, diffusant ses idéaux et son histoire.</p><p>J'ai été recruté pour créer ce site de présentation du projet et de l'équipe. J'ai créé le design simple, presque scolaire, mais le contenu m'a été fourni.</p>",
         "problem": "<p>Le plus grand besoin était la diffusion d'un message clair, joyeux et honnête. La simplicité de l'interface était primordial.</p>",
-        "solution": "<p>J'ai opté pour un site statique sans librairie, avec des animation quasiment entièrement réalisées sans autre élément que mon CSS. C'est pas exemple sur ce projet que j'ai créé l'animation de la présentation d'équipe que j'ai réutilisé sur mon portfolio pour présenter les projets.</p><img src='/projects/content/apjdlf/team.gif' alt=\"GIF animé de l'effet utilisé pour présenter l'équipe\">",
+        "solution": "<p>J'ai opté pour un site \"statique\" sans librairie, avec des animation quasiment entièrement réalisées sans autre élément que le CSS. C'est pas exemple sur ce projet que j'ai créé l'animation de la présentation d'équipe que j'ai réutilisé sur mon portfolio pour présenter les projets.</p><img src='/projects/content/apjdlf/team.gif' alt=\"GIF animé de l'effet utilisé pour présenter l'équipe\"><p>Pour gérer le backend, et en prévision de fonctions plus avancées, j'ai utilisé PHP.",
         "evolution": ""
     },
     {

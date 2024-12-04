@@ -16,23 +16,17 @@ interface sectionInterface {
 interface AppBarMenuMarkerProps {
     sectionsList: Array<sectionInterface>,
 }
-interface coord {
-    x: number,
-    y: number,
-}
 interface styledMarkerProps {
-    top: number,
-    left: number,
-    width: number,
-    height: number,
-    polygon: Array<coord>
+    $top: number,
+    $left: number,
+    $width: number,
+    $height: number,
 }
 const StyledMarker = styled.div<styledMarkerProps>`
-    top: ${props => props.top}px;
-    left: ${props => props.left}px;
-    width: ${props => props.width}px;
-    height: ${props => props.height}px;
-    clip-path: polygon(${props => props.polygon.map(coord => `${coord.x}% ${coord.y}%`).join(',')});
+    top: ${props => props.$top}px;
+    left: ${props => props.$left}px;
+    width: ${props => props.$width}px;
+    height: ${props => props.$height}px;
 `;
 
 
@@ -99,11 +93,13 @@ export const AppBarMenuMarker:React.FC<AppBarMenuMarkerProps> = ({sectionsList})
     return selectedMenuLink && polygonCoords && (
         <StyledMarker
             className="menu-marker"
-            top={selectedMenuLink.offsetTop}
-            left={selectedMenuLink.offsetLeft}
-            width={selectedMenuLink.offsetWidth}
-            height={selectedMenuLink.offsetHeight}
-            polygon={polygonCoords}
+            $top={selectedMenuLink.offsetTop}
+            $left={selectedMenuLink.offsetLeft}
+            $width={selectedMenuLink.offsetWidth}
+            $height={selectedMenuLink.offsetHeight}
+            style={{
+                clipPath: `polygon(${polygonCoords.map(coord => `${coord.x}% ${coord.y}%`).join(',')})`,
+            }}
         />
     )
 };

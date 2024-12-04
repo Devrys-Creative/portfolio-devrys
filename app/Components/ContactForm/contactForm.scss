@@ -1,5 +1,22 @@
 @use "sass:color";
 
+.contact-form-notification {
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 30px;
+    border-style: solid;
+    border-width: 2px;
+    text-align: center;
+    &--error {
+        color: #ff6060;
+        border-color: #ff6060;
+    }
+    &--success {
+        color: var(--cta-color);
+        border-color: var(--cta-color);
+    }
+
+}
 .contact-form {
     display: grid;
     grid-template-columns: 500px 600px;

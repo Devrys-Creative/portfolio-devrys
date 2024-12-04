@@ -9,11 +9,35 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
+type statusType = "sent" | "error" | null;
+interface responseInterface {
+    status: string,
+    message: string,
+}
+
 export const ContactForm = () => {
-    const { handleSubmit, register, formState: { errors, dirtyFields, isValid }, watch } = useForm({
+
+    const [status, setStatus] = useState<statusType>(null);
+    const [errorMessage, setErrorMessage] = useState<string|null>(null);
+
+
+    const sendMail = async (jsonLoad:string) => {
+        const response = await fetch("https://qhy9945.phpnet.org/devrys-backend/api/v1/index.php",{
+            method: "POST",
+            body: jsonLoad,
+        });
+        if(response.ok) { setStatus("sent"); }
+        else { setStatus("error");
+            const errorData:responseInterface = await response.json();
+            setErrorMessage(errorData.message)
+        }
+        reset();
+    };
+
+    const { handleSubmit, register, reset, formState: { errors, dirtyFields, isValid }, watch } = useForm({
         mode: "onChange",
     });
-    const onSubmit = (values: FieldValues) => console.log(values);
+    const onSubmit = (values: FieldValues) => sendMail(JSON.stringify(values));
 
     const requiredMessage = "Ce champ est nécessaire";
 
@@ -26,6 +50,9 @@ export const ContactForm = () => {
     },[textareaMailValue])
 
     return (
+        <>
+        { status === "sent" && <div className="contact-form-notification contact-form-notification--success">Message envoyé</div> }
+        { status === "error" && <div className="contact-form-notification contact-form-notification--error">Erreur : {errorMessage}</div> }
         <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
             <fieldset className="contact-form__fieldset">
                 <div>
@@ -118,5 +145,6 @@ export const ContactForm = () => {
             </fieldset>
             <button className="contact-form__button" disabled={!isValid}>{<FontAwesomeIcon icon={faEnvelope} /> } Envoyer le message</button>
         </form>
+        </>
     )
 }
