@@ -17,7 +17,7 @@ interface projectCardProps {
 export const ProjectCard:React.FC<projectCardProps> = ({video,src,alt,title,summary,techList}) => {
     
     return (
-        <Link href={`/project/${title.replace(/[^a-zA-Z0-9_-]/g,'-')}`}>
+        <Link href={`/project/${encodeURIComponent(title)}`}>
         <article className="project-card">
             <ProjectThumb
                 videoSource={video}

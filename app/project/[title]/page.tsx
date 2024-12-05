@@ -23,10 +23,25 @@ export const generateMetadata = async ({params} : projectProps) => {
 
     const projectData = await getProjectByTitle(title);
     if (!projectData) { console.log(projectData,title); redirect('/'); }
+    
+    const pageTitle = `Devrys Creative : ${projectData.title}`;
+    const pageDescription = projectData.summary;
+    const pageCover = `/projects/cover/${projectData.image}`;
+    const pageCoverAlt = projectData.imageAlt;
 
     return {
-        title: `Devrys - ${title}`,
-        description: projectData.summary,
+        title: pageTitle,
+        description: pageDescription,
+        openGraph: {
+          title: pageTitle,
+          description: pageDescription,
+          type: "article",
+          url: `https://devrys-creative.com/projects/${title}`,
+          images: {
+            url: pageCover,
+            alt: pageCoverAlt,
+          }
+        },
     };
 };
 

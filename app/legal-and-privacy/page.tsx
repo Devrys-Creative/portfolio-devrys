@@ -9,13 +9,25 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./page-legal-and-privacy.scss";
 import { Metadata } from "next";
 
-
-// metadata management
+// Metadata
+const pageTitle = "Devrys Creative - mentions légales";
+const pageDescription = "Mentions légales et politique de confidentialité du portfolio de Devrys-Creative";
+const pageCover = "https://devrys-creative.com/banner/head.png";
+const pageCoverAlt = "Dessin de Sylvain, développeur web, entouré d'animaux.";
 export const metadata: Metadata = {
-    title: "Devrys - Mentions légales",
-    description: "Mentions légales et politique de confidentialité du portfolio de Devrys-Creative",
+  title: pageTitle,
+  description: pageDescription,
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    type: "website",
+    url: "https://devrys-creative.com/",
+    images: {
+      url: pageCover,
+      alt: pageCoverAlt,
+    }
+  },
 };
-
 
 const legalAndPrivacyPage = () => {
 

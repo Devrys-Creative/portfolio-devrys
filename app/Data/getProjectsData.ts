@@ -30,5 +30,5 @@ export const getAllProjectsData = async () => {
 export const getProjectByTitle = async (title: string) => {
     const projectsData = await getAllProjectsData();
     console.log(projectsData)
-    return projectsData.find(project => project.title.replace(/[^a-zA-Z0-9_-]/g,'-') === title);
+    return projectsData.find(project => project.title === decodeURIComponent(title));
 };

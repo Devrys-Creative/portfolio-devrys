@@ -16,10 +16,24 @@ import "./page-home.scss";
 import {svgRepoImages} from "./Assets/icons/svgRepo";
 const {logoAngular,logoC,logoCSS,logoCpp,logoDocker,logoGit,logoGitHub,logoGitLab,logoHTML,logoJS,logoNext,logoNuxt,logoOC,logoPHP,logoPython,logoReact,logoRedux,logoSf,logoTS,logoVet,logoVue} = svgRepoImages;
 
-// metadata management
+// Metadata
+const pageTitle = "Devrys Creative - portfolio de développeur web";
+const pageDescription = "Découvrez mes services de développement web, quelques projets réalisés et les compétences que je peux mettre au service de vos envies !";
+const pageCover = "https://devrys-creative.com/banner/head.png";
+const pageCoverAlt = "Dessin de Sylvain, développeur web, entouré d'animaux.";
 export const metadata: Metadata = {
-  title: "Devrys - portfolio",
-  description: "Portfolio de développeur·euse",
+  title: pageTitle,
+  description: pageDescription,
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    type: "website",
+    url: "https://devrys-creative.com/",
+    images: {
+      url: pageCover,
+      alt: pageCoverAlt,
+    }
+  },
 };
 
 // Home page component

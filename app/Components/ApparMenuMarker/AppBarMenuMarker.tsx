@@ -82,7 +82,6 @@ export const AppBarMenuMarker:React.FC<AppBarMenuMarkerProps> = ({sectionsList})
             window.removeEventListener("scroll", handleScroll);
             clearInterval(polygonInterval);
         }
-
     },[]);
     
     useEffect(() => {
