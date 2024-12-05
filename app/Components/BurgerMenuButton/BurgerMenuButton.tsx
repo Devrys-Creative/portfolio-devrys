@@ -18,8 +18,8 @@ export const BurgerMenuButton = () => {
     },[])
 
     return (
-        <div className="burger-menu">
-            <div className="burger-menu__icon"></div>
-        </div>
+        <nav className="burger-menu" aria-roledescription="ouvre et ferme le menu déroulant">
+            <div className="burger-menu__icon" aria-label="burger menu icon"></div>
+        </nav>
     )
 }

@@ -35,7 +35,7 @@ export const ThemeToggler = () => {
 
 
     return theme && (
-        <div className={`theme-toggler`} onClick={toggleTheme}>
+        <div className={`theme-toggler`} onClick={toggleTheme} aria-label="widget de changement de thème" aria-roledescription="permet de passer du thème clair au thème foncé et inversement">
             <FontAwesomeIcon icon={faSun} />
             <FontAwesomeIcon icon={faMoon} />
         </div>

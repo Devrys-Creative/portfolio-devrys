@@ -99,6 +99,7 @@ export const AppBarMenuMarker:React.FC<AppBarMenuMarkerProps> = ({sectionsList})
             style={{
                 clipPath: `polygon(${polygonCoords.map(coord => `${coord.x}% ${coord.y}%`).join(',')})`,
             }}
+            aria-label="menu marker"
         />
     )
 };

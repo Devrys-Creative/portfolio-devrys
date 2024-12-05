@@ -13,7 +13,6 @@ $dark-blue-color-light: 10.8%;
 $dark-blue-color: hsl($dark-blue-color-hue,$dark-blue-color-sat,$dark-blue-color-light);
 // 
 $cta-color: #06D6A0;
-//$effects-color: #3c91e6;
 
 // common colors
 :root{
@@ -28,7 +27,8 @@ $cta-color: #06D6A0;
     --secondary-color-light: #{$dark-blue-color-light};
 
     --cta-color: #{$cta-color};
-    //--effects-color: #{$effects-color};
+
+    --placeholder-color: #{rgb(100,100,100)};
 }
 // themes colors
 .theme-dark {
@@ -40,7 +40,6 @@ $cta-color: #06D6A0;
     --header-background-color: #{hsla($light-yellow-color-hue,$light-yellow-color-sat,$light-yellow-color-light,0.8)};
     --section-title-text-color: #ffffff;
     --card-background-color: #{$light-yellow-color};
-    --placeholder-color: #{hsl($light-yellow-color-hue,$light-yellow-color-sat - 30%,$light-yellow-color-light - 20%)};
     --about-background-1: #{hsla(255,255,255,0.1)};
     --about-background-2: #{hsla(255,255,255,0.05)};
     --project-card-background: #{hsla($dark-blue-color-hue,$dark-blue-color-sat,$dark-blue-color-light,0.9)};
@@ -57,7 +56,6 @@ $cta-color: #06D6A0;
     --header-background-color: rgba(255,255,255,0.8);
     --section-title-text-color: #000000;
     --card-background-color: #ffffff;
-    --placeholder-color: #{rgb(180,180,180)};
     --about-background-1: #{hsla(0,0,0,0.1)};
     --about-background-2: #{hsla(0,0,0,0.05)};
     --project-card-background: #{hsla($light-yellow-color-hue,$light-yellow-color-sat,$light-yellow-color-light,0.9)};

@@ -54,7 +54,7 @@ export const ContactForm = () => {
         { status === "sent" && <div className="contact-form-notification contact-form-notification--success">Message envoyé</div> }
         { status === "error" && <div className="contact-form-notification contact-form-notification--error">Erreur : {errorMessage}</div> }
         <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
-            <fieldset className="contact-form__fieldset">
+            <fieldset className="contact-form__fieldset" aria-label="Vos informations">
                 <div>
                     <div className="contact-form__fieldset__input-error">{errors.name && errors.name.message as string}</div>
                     <input type="text"
@@ -67,6 +67,7 @@ export const ContactForm = () => {
                         })}
                         placeholder="Nom"
                         className={`contact-form__fieldset__input ${errors.name && 'contact-form__fieldset__input--error'} ${!errors.name && dirtyFields.name && 'contact-form__fieldset__input--valid'}`}
+                        aria-label="Nom et prénom"
                     />
                 </div>
 
@@ -81,6 +82,7 @@ export const ContactForm = () => {
                         })}
                         placeholder="Société (facultatif)"
                         className={`contact-form__fieldset__input ${errors.company && 'contact-form__fieldset__input--error'} ${!errors.company && dirtyFields.company && 'contact-form__fieldset__input--valid'}`}
+                        aria-label="Société (facultatif)"
                     />
                 </div>
 
@@ -96,6 +98,7 @@ export const ContactForm = () => {
                         })}
                         placeholder="Adresse e-mail"
                         className={`contact-form__fieldset__input ${errors.email && 'contact-form__fieldset__input--error'} ${!errors.email && dirtyFields.email && 'contact-form__fieldset__input--valid'}`}
+                        aria-label="adresse e-mail"
                     />
                 </div>
 
@@ -110,10 +113,11 @@ export const ContactForm = () => {
                         })}
                         placeholder="Numéro de téléphone (facultatif)"
                         className={`contact-form__fieldset__input ${errors.phone && 'contact-form__fieldset__input--error'} ${!errors.phone && dirtyFields.phone && 'contact-form__fieldset__input--valid'}`}
+                        aria-label="Numéro de téléphone (facultatif)"
                     />
                 </div>
                 </fieldset>
-            <fieldset className="contact-form__fieldset">
+            <fieldset className="contact-form__fieldset" aria-label="Votre message">
                 <div>
                     <div className="contact-form__fieldset__input-error">{errors.object && errors.object.message as string}</div>
                     <select id="object"
@@ -122,6 +126,7 @@ export const ContactForm = () => {
                         })}
                         className={`contact-form__fieldset__select ${errors.object && 'contact-form__fieldset__select--error'} ${!errors.object && dirtyFields.object && 'contact-form__fieldset__select--valid'}`}
                         defaultValue=""
+                        aria-label="Objet du message"
                     >
                         <option hidden value="" className="contact-form__fieldset__select__placeholder">Pourquoi souhaitez-vous me contacter ?</option>
                         <option value="mission">Proposer une mission (freelance)</option>
@@ -138,6 +143,7 @@ export const ContactForm = () => {
                             maxLength: { value: 2000, message: "Votre message est trop long !" },
                         })}
                         className={`contact-form__fieldset__textarea ${errors.mail && 'contact-form__fieldset__textarea--error'} ${!errors.mail && dirtyFields.mail && 'contact-form__fieldset__textarea--valid'}`}
+                        aria-label="Contenu du message"
                     >
                     </textarea>
                 </div>

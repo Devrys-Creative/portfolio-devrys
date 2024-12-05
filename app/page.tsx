@@ -63,7 +63,7 @@ const Home = () => {
           <FontAwesomeIcon icon={["fab", "php"]} />
           {/* < li>Redux / next/ nuxt / angular / symfony </li> */}
         </div>
-        <div className="hero-header__scroll-indicator"><Link href="/#about"><FontAwesomeIcon icon="caret-down" /></Link></div>
+        <div className="hero-header__scroll-indicator"><Link href="/#about" aria-roledescription="Indique la direction de la suite de la page"><FontAwesomeIcon icon="caret-down" /></Link></div>
       </section>
 
       <AppBar menuMarker={true} />
@@ -139,7 +139,7 @@ const Home = () => {
           <div className="about__article__logo">
             <Image
               src={logoOC}
-              alt="logo de typescript"
+              alt="logo de OpenClassrooms"
               height={logoSizeInText}
               width={logoSizeInText}
             />
