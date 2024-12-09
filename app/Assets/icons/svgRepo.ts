@@ -25,9 +25,14 @@ import logoBug from "./svg-repo/bug.svg";
 import logoJest from "./svg-repo/jest-svgrepo-com.svg";
 import logoSEO from "./svg-repo/seo-svgrepo-com.svg";
 import logoSwagger from "./svg-repo/swagger-svgrepo-com.svg";
+import logoLinkedIn from "./svg-repo/linkedin-svgrepo-com.svg";
+import logoTeam from "./svg-repo/collaboration-team-svgrepo-com.svg";
+import logoSQL from "./svg-repo/sql-database-generic-svgrepo-com.svg";
+import logoMySQL from "./svg-repo/mysql-logo-svgrepo-com.svg";
+
 
 type ImageMap = {
     [key: string] : string,
 }
 
-export const svgRepoImages:ImageMap = {logoAngular,logoC,logoCSS,logoSASS,logoCpp,logoDocker,logoGit,logoGitHub,logoGitLab,logoHTML,logoJS,logoNext,logoNuxt,logoOC,logoPHP,logoPython,logoReact,logoRedux,logoSf,logoTS,logoVet,logoVue,logoBug,logoJest,logoSEO,logoSwagger};
+export const svgRepoImages:ImageMap = {logoTeam,logoSQL,logoMySQL,logoLinkedIn,logoAngular,logoC,logoCSS,logoSASS,logoCpp,logoDocker,logoGit,logoGitHub,logoGitLab,logoHTML,logoJS,logoNext,logoNuxt,logoOC,logoPHP,logoPython,logoReact,logoRedux,logoSf,logoTS,logoVet,logoVue,logoBug,logoJest,logoSEO,logoSwagger};

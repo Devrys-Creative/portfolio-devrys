@@ -54,9 +54,12 @@
     display: flex;
     flex-wrap: wrap; // delete if reducing size with breakpoints
     gap: 30px;
-    font-size: 4em;
-    @media screen and (max-width: 767px) {
-      font-size: 3em;
+    img {
+      height: 50px;
+      width: auto;
+      @media screen and (max-width: 767px) {
+        height: 35px;
+      }
     }
   }
   &__scroll-indicator {
@@ -67,6 +70,9 @@
     color: var(--free-text-alt-color);
     overflow: visible;
     animation: bouncing 1s ease 5s infinite alternate;
+    span {
+      display: none;
+    }
   }
 }
 

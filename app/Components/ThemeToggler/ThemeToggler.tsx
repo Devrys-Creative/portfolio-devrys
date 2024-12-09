@@ -13,7 +13,6 @@ export const ThemeToggler = () => {
 
     const invertTheme = (theme:themeType) => theme==="dark" ? "light" : "dark";
     const toggleTheme = () => {
-        console.log("toggle theme");
         setTheme( invertTheme(theme) );
     };
 
@@ -23,7 +22,6 @@ export const ThemeToggler = () => {
     },[]);
 
     useEffect(() => {
-        console.log("useEffect toggler !");
         if(theme !== null) { 
             document.documentElement.classList.replace(`theme-${invertTheme(theme)}`,`theme-${theme}`);
             const themeToggler = document.querySelector(".theme-toggler") as HTMLElement;
@@ -35,7 +33,7 @@ export const ThemeToggler = () => {
 
 
     return theme && (
-        <div className={`theme-toggler`} onClick={toggleTheme} aria-label="widget de changement de thème" aria-roledescription="permet de passer du thème clair au thème foncé et inversement">
+        <div className={`theme-toggler`} onClick={toggleTheme} role="button" aria-label="widget de changement de thème" aria-roledescription="permet de passer du thème clair au thème foncé et inversement">
             <FontAwesomeIcon icon={faSun} />
             <FontAwesomeIcon icon={faMoon} />
         </div>

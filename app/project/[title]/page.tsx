@@ -12,12 +12,23 @@ import Link from 'next/link';
 
 
 // props interface
-interface projectProps {
-    params: { title? : string }
+interface ProjectProps {
+    params: Promise<{ title? : string }>
+}
+
+// generate static params
+import projects from '../../Data/projects.json';
+import slugify from 'slugify';
+
+export async function generateStaticParams() {
+    const staticParams = projects.map((project) => ({
+        title: slugify(project.title,{lower: true,strict: true, locale: "fr"}),
+    }));
+    return staticParams;
 }
 
 // manage metadata
-export const generateMetadata = async ({params} : projectProps) => {
+export const generateMetadata = async ({ params } : ProjectProps) => {
     const { title } = await params;
     if (!title) { redirect('/'); }
 
@@ -46,7 +57,7 @@ export const generateMetadata = async ({params} : projectProps) => {
 };
 
 // project page component
-const ProjectPage:React.FC<projectProps> = async ({params}) => {
+const ProjectPage:React.FC<ProjectProps> = async ({params}) => {
 
     const { title } = await params;
     if (!title) { redirect('/'); }

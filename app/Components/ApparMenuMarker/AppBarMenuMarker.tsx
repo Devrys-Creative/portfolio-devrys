@@ -1,5 +1,5 @@
-
 'use client';
+
 // React and next components
 import { useEffect, useState } from "react";
 import styled from "styled-components";
@@ -34,7 +34,7 @@ export const AppBarMenuMarker:React.FC<AppBarMenuMarkerProps> = ({sectionsList})
 
     // Current displayed section
     const [displayedSection, setDisplayedSection] = useState(sectionsList[0]);
-    const [selectedMenuLink, setSelectedMenuLink] = useState(document.getElementById(`menu-${sectionsList[0].id}`) as HTMLElement);
+    const [selectedMenuLink, setSelectedMenuLink] = useState<HTMLElement|undefined>(); //document.getElementById(`menu-${sectionsList[0].id}`) as HTMLElement
     const [polygonCoords, setPolygonCoords] = useState([
         {x:50,y:0,},
         {x:93,y:25,},
@@ -49,7 +49,6 @@ export const AppBarMenuMarker:React.FC<AppBarMenuMarkerProps> = ({sectionsList})
         sectionsList.forEach(section => {
             section.offset = (document.getElementById(section.id) as HTMLElement).offsetTop;
         });
-        console.log(sectionsList);
         // handle scroll
         const handleScroll = () => {
             const currentOffset = window.scrollY;
@@ -85,7 +84,6 @@ export const AppBarMenuMarker:React.FC<AppBarMenuMarkerProps> = ({sectionsList})
     },[]);
     
     useEffect(() => {
-        console.log(displayedSection);
         setSelectedMenuLink(document.getElementById(`menu-${displayedSection.id}`) as HTMLElement);
     },[displayedSection])
 
@@ -99,7 +97,8 @@ export const AppBarMenuMarker:React.FC<AppBarMenuMarkerProps> = ({sectionsList})
             style={{
                 clipPath: `polygon(${polygonCoords.map(coord => `${coord.x}% ${coord.y}%`).join(',')})`,
             }}
-            aria-label="menu marker"
+            aria-roledescription="Cet élément graphique se positionne derrière l'ancre (du menu) actuellement affichée (varie selon le défilement vertical de la page)"
+            aria-hidden="true"
         />
     )
 };

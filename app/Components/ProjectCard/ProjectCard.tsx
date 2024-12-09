@@ -1,10 +1,14 @@
+// vendor components
 import Image from "next/image";
-import "./projectCard.scss";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { IconName } from "@fortawesome/fontawesome-svg-core";
+import slugify from "slugify";
 import Link from "next/link";
+
+// custom components
 import { svgRepoImages } from "@/app/Assets/icons/svgRepo";
 import { ProjectThumb } from "../projectThumb/ProjectThumb";
+
+// style
+import "./projectCard.scss";
 
 interface projectCardProps {
     video: string,
@@ -17,7 +21,7 @@ interface projectCardProps {
 export const ProjectCard:React.FC<projectCardProps> = ({video,src,alt,title,summary,techList}) => {
     
     return (
-        <Link href={`/project/${encodeURIComponent(title)}`}>
+        <Link href={`/project/${slugify(title,{lower: true,strict: true, locale: "fr"})}`}>
         <article className="project-card">
             <ProjectThumb
                 videoSource={video}

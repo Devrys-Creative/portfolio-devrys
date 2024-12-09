@@ -23,6 +23,11 @@ $title_size: 40px;
     @media screen and (max-width: 767px) {
       width: 100%;
       max-width: $card-size-enlarged;
+      &::after {
+        content: "";
+        border-top: solid 3px white;
+        width: 100%;
+      }
     }
     &:hover {
         flex: 2;
@@ -80,6 +85,6 @@ $title_size: 40px;
         display: flex;
         padding: 10px;
         gap:10px;
-        justify-content: end;
+        justify-content: flex-end;
     }
 }

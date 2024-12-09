@@ -1,13 +1,16 @@
 
+// vendor components
 import Link from "next/link";
-import { ThemeToggler } from "../ThemeToggler/ThemeToggler";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import "./appBar.scss";
-import { AppBarMenuMarker } from "../ApparMenuMarker/AppBarMenuMarker";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+
+// Custom components
+import { AppBarMenuMarker } from "../ApparMenuMarker/AppBarMenuMarker";
+import { ThemeToggler } from "../ThemeToggler/ThemeToggler";
 import { BurgerMenuButton } from "../BurgerMenuButton/BurgerMenuButton";
-// import { useTheme } from "@/app/Hooks/useTheme";
+
+// Style
+import "./appBar.scss";
 
 export const AppBar = ({menuMarker = false}) => {
 

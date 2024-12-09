@@ -1,6 +1,7 @@
 
 import fs from 'fs';
 import path from 'path';
+import slugify from 'slugify';
 
 export interface ProjectInterface {
         id: number,
@@ -22,13 +23,11 @@ export const getAllProjectsData = async () => {
   const filePath = path.join(process.cwd(), 'app/Data', 'projects.json');
   const jsonData = fs.readFileSync(filePath, 'utf-8');
   const projectsData = JSON.parse(jsonData);
-//   console.log(projectsData);
   return projectsData as Array<ProjectInterface>;
 };
 
 
 export const getProjectByTitle = async (title: string) => {
     const projectsData = await getAllProjectsData();
-    console.log(projectsData)
-    return projectsData.find(project => project.title === decodeURIComponent(title));
+    return projectsData.find(project => slugify(project.title,{lower: true,strict: true, locale: "fr"}) === title);
 };

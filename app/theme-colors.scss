@@ -40,8 +40,8 @@ $cta-color: #06D6A0;
     --header-background-color: #{hsla($light-yellow-color-hue,$light-yellow-color-sat,$light-yellow-color-light,0.8)};
     --section-title-text-color: #ffffff;
     --card-background-color: #{$light-yellow-color};
-    --about-background-1: #{hsla(255,255,255,0.1)};
-    --about-background-2: #{hsla(255,255,255,0.05)};
+    --about-background-1: #{hsla(255deg,100%,100%,10%)};
+    --about-background-2: #{hsla(255deg,100%,100%,5%)};
     --project-card-background: #{hsla($dark-blue-color-hue,$dark-blue-color-sat,$dark-blue-color-light,0.9)};
     --project-card-text: #{$light-yellow-color};
 }
@@ -56,8 +56,8 @@ $cta-color: #06D6A0;
     --header-background-color: rgba(255,255,255,0.8);
     --section-title-text-color: #000000;
     --card-background-color: #ffffff;
-    --about-background-1: #{hsla(0,0,0,0.1)};
-    --about-background-2: #{hsla(0,0,0,0.05)};
+    --about-background-1: #{hsla(0deg,0%,0%,10%)};
+    --about-background-2: #{hsla(0deg,0%,0%,5%)};
     --project-card-background: #{hsla($light-yellow-color-hue,$light-yellow-color-sat,$light-yellow-color-light,0.9)};
     --project-card-text: #{$dark-blue-color};
 }

@@ -24,13 +24,10 @@ export default function RootLayout({
           id="theme"
           dangerouslySetInnerHTML={{
             __html: `
-                console.log("biou theme");
                 const savedTheme = localStorage.getItem('theme');
                 if (savedTheme) {
-                  console.log("apply saved theme");
                   document.documentElement.classList.add("theme-" + savedTheme);
                 } else {
-                  console.log("apply default theme");
                   document.documentElement.classList.add("theme-dark");
                 };
             `,
