@@ -23,11 +23,6 @@ $title_size: 40px;
     @media screen and (max-width: 767px) {
       width: 100%;
       max-width: $card-size-enlarged;
-      &::after {
-        content: "";
-        border-top: solid 3px white;
-        width: 100%;
-      }
     }
     &:hover {
         flex: 2;
@@ -69,6 +64,7 @@ $title_size: 40px;
         text-align: right;
         @media screen and (max-width: 767px) {
             transform: unset;
+            border-bottom: 3px white solid;
         }
     }
     &__title {
@@ -80,6 +76,9 @@ $title_size: 40px;
         width: $card-size-enlarged;
         height: $title_size;
         padding: 5px;
+        @media screen and (max-width: 767px) {
+            border-left: 3px white solid;
+        }
     }
     &__tech {
         display: flex;

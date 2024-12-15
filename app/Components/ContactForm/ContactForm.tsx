@@ -22,7 +22,7 @@ export const ContactForm = () => {
 
 
     const sendMail = async (jsonLoad:string) => {
-        const response = await fetch("https://qhy9945.phpnet.org/devrys-backend/api/v1/index.php",{
+        const response = await fetch("https://devrys-creative.com/backend/api/v1/index.php",{
             method: "POST",
             body: jsonLoad,
         });

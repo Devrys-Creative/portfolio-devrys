@@ -6,7 +6,6 @@ import "./burgerMenuButton.scss";
 export const BurgerMenuButton = () => {
 
     const toggleMenu = () => {
-        console.log("toggle");
         const burgerButton = document.querySelector(".burger-menu") as HTMLElement;
         burgerButton.classList.toggle("burger-menu--active");
         const menu = document.querySelector(".appbar__menu") as HTMLElement;

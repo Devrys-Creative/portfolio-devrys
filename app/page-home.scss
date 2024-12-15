@@ -93,10 +93,10 @@
   &__article {
     padding: 50px;
     color: var(--free-text-color);
-    &:nth-child(2),&:nth-child(5) {
+    &:nth-child(3),&:nth-child(6) {
       background-color: var(--about-background-1);
     }
-    &:nth-child(3),&:nth-child(4) {
+    &:nth-child(4),&:nth-child(5) {
       background-color:  var(--about-background-2);
     }
     @media screen and (max-width: 1100px) {

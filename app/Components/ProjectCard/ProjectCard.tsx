@@ -33,7 +33,6 @@ export const ProjectCard:React.FC<projectCardProps> = ({video,src,alt,title,summ
                 <div>{summary}</div>
                 <div className="project-card__tech">
                     {techList.map(tech => (
-                        // <FontAwesomeIcon key={`${title.trim()}${tech}`} icon={["fab",tech]} />
                         <Image
                             key={`img_${tech}`}
                             src={svgRepoImages[`logo${tech}`]}

@@ -54,7 +54,7 @@
         "image": "SophieBluel.jpg",
         "imageAlt": "capture d'écran du site du projet de portfolio pour Sophie Bluel, architecte d'intérieur",
         "tags": ["HTML","CSS","SASS","JS","Swagger"],
-        "context": "<p>Ce projet fictif réalisé dans le cadre de ma formation à <a href='https://openclassrooms.com/fr/' target='_blank'>OpenClassrooms</a> visait à produire un site dynamique avec javascript natif (sans librairie). Le code devait pouvoir afficher des modales, permettre une connexion d'utilisateur·ice, modifier la page pour y ajouter les boutons d'administration, ajouter et supprimer des travaux au protfolio sans recharger la page.</p><img src='/projects/content/sophie-bluel/sophie-bluel-filters.gif' alt='animation des filtres'><p>Pour cela, j'avais à ma disposition des maquettes détaillées (sur Figma), ainsi qu'un backend fonctionnel et la documentation swagger de l'API REST.</p>",
+        "context": "<p>Ce projet fictif réalisé dans le cadre de ma formation à <a href='https://openclassrooms.com/fr/' target='_blank'>OpenClassrooms</a> visait à produire un site dynamique avec javascript natif (sans librairie). Le code devait pouvoir afficher des modales, permettre une connexion d'utilisateur·ice, modifier la page pour y ajouter les boutons d'administration, ajouter et supprimer des travaux au portfolio sans recharger la page.</p><img src='/projects/content/sophie-bluel/sophie-bluel-filters.gif' alt='animation des filtres'><p>Pour cela, j'avais à ma disposition des maquettes détaillées (sur Figma), ainsi qu'un backend fonctionnel et la documentation swagger de l'API REST.</p>",
         "problem": "<p>La problématique était simple : optimiser le code pour avoir un site performant et simple à utiliser. Réaliser les appels API avec javascript, traiter les réponses et modifier la page en conséquence. Il fallait aussi permettre de rester connecté·e à la visite suivante du site, en utilisant les storage.</p>",
         "solution": "",
         "evolution": ""
@@ -77,7 +77,7 @@
     {
         "id": 6,
         "title": "Nina Carducci",
-        "url": "",
+        "url": "https://ryssanavlys.github.io/OC_P8_NinaCarducci/",
         "source": "https://github.com/RyssaNavlys/OC_P8_NinaCarducci",
         "summary": "Projet fictif de formation : optimiser le référencement du site de Nina Carducci.",
         "video": "",

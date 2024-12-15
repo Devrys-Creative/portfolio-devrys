@@ -33,7 +33,7 @@ export const generateMetadata = async ({ params } : ProjectProps) => {
     if (!title) { redirect('/'); }
 
     const projectData = await getProjectByTitle(title);
-    if (!projectData) { console.log(projectData,title); redirect('/'); }
+    if (!projectData) { redirect('/'); }
     
     const pageTitle = `Devrys Creative : ${projectData.title}`;
     const pageDescription = projectData.summary;
@@ -63,7 +63,7 @@ const ProjectPage:React.FC<ProjectProps> = async ({params}) => {
     if (!title) { redirect('/'); }
 
     const projectData = await getProjectByTitle(title);
-    if (!projectData) { console.log(projectData,title); redirect('/'); }
+    if (!projectData) { redirect('/'); }
 
     return (
         <>
@@ -92,7 +92,6 @@ const ProjectPage:React.FC<ProjectProps> = async ({params}) => {
 
                 <div className='project-page__tags-list'>
                     {projectData.tags.map(tech => (
-                            // <FontAwesomeIcon key={`${title.trim()}${tech}`} icon={["fab",tech]} />
                             <Image
                                 key={`img_${tech}`}
                                 src={svgRepoImages[`logo${tech}`]}

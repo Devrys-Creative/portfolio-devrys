@@ -12,7 +12,7 @@ import { Metadata } from "next";
 // Metadata
 const pageTitle = "Devrys Creative - mentions légales";
 const pageDescription = "Mentions légales et politique de confidentialité du portfolio de Devrys-Creative";
-const pageCover = "https://devrys-creative.com/banner/head.png";
+const pageCover = "https://devrys-creative.com/banner/devrys-banner.webp";
 const pageCoverAlt = "Dessin de Sylvain, développeur web, entouré d'animaux.";
 export const metadata: Metadata = {
   title: pageTitle,
@@ -44,9 +44,9 @@ const legalAndPrivacyPage = () => {
                     <p>Téléphone : contactez-moi via <Link href="/#contact">le formulaire</Link>.</p>
                     <p>E-mail : contactez-moi via <Link href="/#contact">le formulaire</Link>.</p>
                     <h3 className="legal-and-privacy-page__section__subtitle"><FontAwesomeIcon icon="server" /> Hébergement</h3>
-                    <p>Hébergeur : </p>
-                    <p>Adresse : </p>
-                    <p>Téléphone : </p>
+                    <p>Hébergeur : o2switch (Siret : 510 909 807 00032)</p>
+                    <p>Adresse : Chemin des Pardiaux - 63000 Clermont-Ferrand</p>
+                    <p>Téléphone : 04.44.44.60.40</p>
                 </section>
                 <section className="legal-and-privacy-page__section">
                     <h2 className="legal-and-privacy-page__section__title"><FontAwesomeIcon icon="database" /> Collecte et traitement des données personnelles</h2>

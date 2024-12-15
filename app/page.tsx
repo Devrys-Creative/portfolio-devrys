@@ -18,7 +18,7 @@ import {svgRepoImages} from "./Assets/icons/svgRepo";
 // Metadata
 const pageTitle = "Devrys Creative - portfolio de développeur web";
 const pageDescription = "Découvrez mes services de développement web, quelques projets réalisés et les compétences que je peux mettre au service de vos envies !";
-const pageCover = "https://devrys-creative.com/banner/head.png";
+const pageCover = "https://devrys-creative.com/banner/devrys-banner.webp";
 const pageCoverAlt = "Dessin de Sylvain, développeur web, entouré d'animaux.";
 export const metadata: Metadata = {
   title: pageTitle,
@@ -80,6 +80,10 @@ const Home = () => {
       <section className="main-section main-section--scroll-margin about" id="about">
         <h2 className="main-section__title about__title"><FontAwesomeIcon icon="id-card-clip" /> À propos de moi</h2>
 
+        <article className="about__article about__article--centered">
+          <p className="about__article__text about__article__text--center"><Link href="/CV/Sylvain.Maitrehenry.CV.pdf" target="_blank" className="cta-button cta-button--big"><FontAwesomeIcon icon="download" /> Lisez mon CV</Link></p>
+        </article>
+
         <article className="about__article">
           <h3 className="about__article__title">Autodidacte passionné</h3>
           <p className="about__article__text">Développeur web <strong>autodidacte passionné depuis les années 2000</strong>, j’ai découvert principalement HTML, CSS et PHP, notamment grâce au Site du Zéro. J’ai aussi appris des rudiments de C, C++, Python et JavaScript. Attiré par <strong>la créativité et le partage d’informations</strong>, j’ai réalisé des sites personnels, associatifs et plus tard des applications professionnelles adaptées aux besoins de mon équipe en tant que directeur de clinique.</p>
@@ -114,7 +118,7 @@ const Home = () => {
 
         <article className="about__article">
           <h3 className="about__article__title">Formation en développement web</h3>
-          <p className="about__article__text">En 2024, j’ai complété une <strong>formation intensive de 9 mois</strong> chez <a href="" target="_blank">OpenClassrooms <FontAwesomeIcon icon="arrow-up-right-from-square" /></a> en développement web, consolidant mes connaissances de base et acquérant de nouvelles compétences comme React, TypeScript, Redux, Next.js, Vue.js et Nuxt. Cette formation m’a permis d’<strong>adopter les conventions et la rigueur professionnelles</strong> essentielles au métier, et me motive aujourd’hui à élargir encore mes horizons (Angular et Symfony notamment, dans un premier temps).</p>
+          <p className="about__article__text">En 2024, j’ai complété une <strong>formation intensive de 9 mois</strong> chez <a href="" target="_blank">OpenClassrooms <FontAwesomeIcon icon="arrow-up-right-from-square" /></a> en développement web, consolidant mes connaissances de base et acquérant de nouvelles compétences comme React, TypeScript, Redux, Next.js, Vue.js et Nuxt. Cette formation m’a permis <strong>d’adopter les conventions et la rigueur professionnelles</strong> essentielles au métier, et me motive aujourd’hui à élargir encore mes horizons (Angular et Symfony notamment, dans un premier temps).</p>
           <div className="about__article__logo">
           {devTech.map(tech => (
               <Image
